@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/notification_cover_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/notification_song_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/notification_cover_iv"
+        android:text="歌曲名"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/notification_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_song_name_tv"
+        android:layout_toRightOf="@id/notification_cover_iv"
+        android:text="歌手"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/notification_prev_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_singer_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/bt_notificationbar_prev" />
+
+    <ImageView
+        android:id="@+id/notification_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_singer_tv"
+        android:layout_toRightOf="@id/notification_prev_btn"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/notification_play_selector" />
+
+    <ImageView
+        android:id="@+id/notification_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_singer_tv"
+        android:layout_toRightOf="@id/notification_play_btn"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/bt_notificationbar_next" />
+
+    <ImageView
+        android:id="@+id/notification_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@mipmap/bt_notificationbar_close" />
+</RelativeLayout>

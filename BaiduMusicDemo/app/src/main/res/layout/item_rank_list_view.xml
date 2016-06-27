@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/item_rank_list_view_cover_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/default_playlist_list" />
+
+    <ImageView
+        android:id="@+id/item_rank_list_view_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignBottom="@id/item_rank_list_view_cover_iv"
+        android:layout_alignRight="@id/item_rank_list_view_cover_iv"
+        android:src="@mipmap/ic_songlist_play" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_rank_list_view_cover_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_rank_list_view_song_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="歌单" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/img_top_number_1"/>
+
+            <TextView
+                android:id="@+id/item_rank_list_view_first_song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1." />
+
+            <TextView
+                android:id="@+id/item_rank_list_view_first_song_author"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="歌手" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/img_top_number_2"/>
+
+            <TextView
+                android:id="@+id/item_rank_list_view_second_song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2."/>
+
+            <TextView
+                android:id="@+id/item_rank_list_view_second_song_author"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/img_top_number_3"/>
+
+            <TextView
+                android:id="@+id/item_rank_list_view_third_song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3."/>
+
+            <TextView
+                android:id="@+id/item_rank_list_view_third_song_author"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_rank_list_view_detail_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_songlist_detail_nor" />
+
+</RelativeLayout>

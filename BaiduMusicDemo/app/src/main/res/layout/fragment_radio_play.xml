@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/radio_play_cover"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/radio_play_default_img"/>
+
+    <TextView
+        android:id="@+id/radio_play_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_play_cover"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text="title"/>
+
+    <TextView
+        android:id="@+id/radio_play_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_play_title"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:alpha="0.75"
+        android:text="author"/>
+
+    <ImageView
+        android:id="@+id/radio_play_pause_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/radio_play_title"
+        android:background="@drawable/radio_play_pause_play_selector"/>
+
+</RelativeLayout>
