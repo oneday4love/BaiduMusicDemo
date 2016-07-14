@@ -6,8 +6,8 @@
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#33c2ff">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBg">
 
         <ImageView
             android:id="@+id/author_all_back_btn"
@@ -18,9 +18,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:text="全部歌手"
-            android:textSize="18sp" />
+            android:layout_marginStart="@dimen/common_margin"
+            android:text="@string/all_author_text"
+            android:textSize="@dimen/common_text_size" />
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -29,7 +29,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -39,21 +39,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:text="热门歌手"
-                    android:textSize="18sp" />
+                    android:text="@string/type_hot_author_tv"
+                    android:textSize="@dimen/common_text_size" />
 
                 <TextView
                     android:id="@+id/author_all_hot_more_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:padding="10dp"
-                    android:text="更多" />
+                    android:padding="@dimen/common_padding"
+                    />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -64,13 +64,13 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/author_hot_vp"
                 android:layout_width="match_parent"
-                android:layout_height="130dp" />
+                android:layout_height="@dimen/type_vp_height" />
             <LinearLayout
             android:id="@+id/author_hot_dots"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/recommend_vp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/common_margin"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
             </LinearLayout>
@@ -84,14 +84,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="华语男歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_chn_male"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -109,14 +109,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="华语女歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_chn_female"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -134,14 +134,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="华语组合"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_chn_group"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -159,14 +159,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="欧美男歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_eng_male"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -184,14 +184,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="欧美女歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_eng_female"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -209,14 +209,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="欧美组合"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_eng_group"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -234,14 +234,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="韩国男歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_krn_male"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -259,14 +259,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="韩国女歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_krn_female"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -284,14 +284,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="韩国组合"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_krn_group"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -309,14 +309,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="日本男歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_jpn_male"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -334,14 +334,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="日本女歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_jpn_female"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -358,14 +358,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="日本组合"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_jpn_group"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -382,14 +382,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/common_margin"
                     android:layout_weight="1"
-                    android:padding="15dp"
-                    android:text="其他歌手"
-                    android:textSize="15sp" />
+                    android:padding="@dimen/common_padding"
+                    android:text="@string/type_other"
+                    android:textSize="@dimen/common_text_size" />
 
                 <ImageView
                     android:layout_width="wrap_content"

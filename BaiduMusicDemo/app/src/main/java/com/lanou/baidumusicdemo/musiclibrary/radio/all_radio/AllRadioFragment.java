@@ -10,6 +10,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.lanou.baidumusicdemo.R;
 import com.lanou.baidumusicdemo.base.BaseFragment;
+import com.lanou.baidumusicdemo.base.UrlValues;
 import com.lanou.baidumusicdemo.musiclibrary.radio.all_radio.radio_play.RadioPlayActivity;
 import com.lanou.baidumusicdemo.volley.GsonRequest;
 import com.lanou.baidumusicdemo.volley.RequestQueueSingleton;
@@ -39,7 +40,7 @@ public class AllRadioFragment extends BaseFragment {
 
         int id = getArguments().getInt("id");
 
-        String url = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id="+id+"&version=5.2.5&from=ios&channel=appstore";
+        String url = UrlValues.RADIO_ALL_FRONT_URL +id+UrlValues.RADIO_ALL_BEHIND_URL;
         GsonRequest<AllRadioBean> gsonRequest = new GsonRequest<AllRadioBean>(url, AllRadioBean.class,
                 new Response.Listener<AllRadioBean>() {
             @Override

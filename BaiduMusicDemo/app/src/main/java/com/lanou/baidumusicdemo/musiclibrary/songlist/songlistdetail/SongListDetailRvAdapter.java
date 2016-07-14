@@ -22,8 +22,11 @@ public class SongListDetailRvAdapter extends RecyclerView.Adapter<SongListDetail
     private Context context;
     private SongListDetailBean bean;
     private OnSongListDetailItemListener onSongListDetailItemListener;
+    private OnSongListGetMoreListener onSongListGetMoreListener;
 
-
+    public void setOnSongListGetMoreListener(OnSongListGetMoreListener onSongListGetMoreListener) {
+        this.onSongListGetMoreListener = onSongListGetMoreListener;
+    }
 
     public void setOnSongListDetailItemListener(OnSongListDetailItemListener onSongListDetailItemListener) {
         this.onSongListDetailItemListener = onSongListDetailItemListener;
@@ -54,6 +57,13 @@ public class SongListDetailRvAdapter extends RecyclerView.Adapter<SongListDetail
                 onSongListDetailItemListener.onItemClick(position);
             }
         });
+
+        holder.moreIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSongListGetMoreListener.onGetMoreClick(position);
+            }
+        });
     }
 
     @Override
@@ -63,13 +73,14 @@ public class SongListDetailRvAdapter extends RecyclerView.Adapter<SongListDetail
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title, author;
-        ImageView detailBtn;
+        ImageView detailBtn, moreIv;
         RelativeLayout item;
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.item_song_list_detail_rv_title);
             author = (TextView) itemView.findViewById(R.id.item_song_list_detail_rv_author);
-            detailBtn = (ImageView) itemView.findViewById(R.id.item_song_list_detail_detail_iv);
+            detailBtn = (ImageView) itemView.findViewById(R.id.item_song_list_detail_more_iv);
+            moreIv = (ImageView) itemView.findViewById(R.id.item_song_list_detail_more_iv);
             item = (RelativeLayout) itemView.findViewById(R.id.item_song_list_detail);
         }
     }
@@ -77,6 +88,10 @@ public class SongListDetailRvAdapter extends RecyclerView.Adapter<SongListDetail
 
     interface OnSongListDetailItemListener{
         void onItemClick(int position);
+    }
+
+    interface OnSongListGetMoreListener{
+        void onGetMoreClick(int position);
     }
 
 }

@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.lanou.baidumusicdemo.R;
 import com.lanou.baidumusicdemo.base.BaseFragment;
+import com.lanou.baidumusicdemo.base.UrlValues;
 import com.lanou.baidumusicdemo.main.ClickToAllAuthor;
 import com.lanou.baidumusicdemo.main.ClickToSongListDetail;
 import com.lanou.baidumusicdemo.main.MainActivity;
@@ -36,6 +37,10 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
     private ImageView[] dotIvs;
     private RecRvBean rvBean;
     private RecVpBean vpBean;
+    private Thread thread;
+    private Handler handler;
+    private Runnable runnable;
+    private boolean threadAlive = true;
 
     private ImageView allAuthor;
 
@@ -61,7 +66,7 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
         vpAdapter = new RecVpAdapter();
 
         //解析轮播图
-        String vpUrl = "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.plaza.getFocusPic&format=json&from=ios&version=5.2.3&from=ios&channel=appstore";
+        String vpUrl = UrlValues.REC_VP_URL;
         GsonRequest<RecVpBean> gsonRequest = new GsonRequest<RecVpBean>(vpUrl, RecVpBean.class, new Response.Listener<RecVpBean>() {
             @Override
             public void onResponse(RecVpBean response) {
@@ -127,18 +132,21 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
         });
 
 
-        final Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        handler = new Handler();
+        runnable = new Runnable() {
             @Override
             public void run() {
                 recVp.setCurrentItem(recVp.getCurrentItem() + 1);
-                handler.postDelayed(this, 3500);
+                if (threadAlive) {
+                    handler.postDelayed(this, 3500);
+                }
             }
         };
         handler.postDelayed(runnable, 3500);
 
+
         // 解析推荐歌单
-        String rvUrl = "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.getHotGeDanAndOfficial&num=6&version=5.2.3&from=ios&channel=appstore";
+        String rvUrl = UrlValues.REC_SONG_LIST_URL;
         GsonRequest<RecRvBean> RvGsonRequest = new GsonRequest<RecRvBean>(rvUrl, RecRvBean.class, new Response.Listener<RecRvBean>() {
             @Override
             public void onResponse(RecRvBean response) {
@@ -163,6 +171,12 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
                 ((ClickToSongListDetail)getActivity()).toSongListDetail(rvBean.getContent().getList().get(position).getListid());
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        threadAlive = false;
     }
 
     @Override

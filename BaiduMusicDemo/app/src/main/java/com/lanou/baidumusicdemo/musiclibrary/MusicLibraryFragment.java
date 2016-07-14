@@ -47,8 +47,8 @@ public class MusicLibraryFragment extends BaseFragment {
         adapter.setFragments(fragments);
         musicLibViewPager.setAdapter(adapter);
         musicLibTabLayout.setupWithViewPager(musicLibViewPager);
-        musicLibTabLayout.setTabTextColors(Color.BLACK, Color.BLUE);
-        musicLibTabLayout.setSelectedTabIndicatorColor(Color.BLUE);
+        musicLibTabLayout.setTabTextColors(Color.GRAY, Color.rgb(0,191,225));
+        musicLibTabLayout.setSelectedTabIndicatorColor(Color.rgb(0,191,225));
 
 
     }

@@ -2,4 +2,24 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="common_padding">10dp</dimen>
+    <dimen name="login_margin">20dp</dimen>
+    <dimen name="common_text_size">15sp</dimen>
+    <dimen name="play_page_margin">5dp</dimen>
+    <dimen name="play_page_vp_margin">20dp</dimen>
+    <dimen name="common_margin">10dp</dimen>
+    <dimen name="type_vp_height">130dp</dimen>
+    <dimen name="detail_appbar_height">230dp</dimen>
+    <dimen name="lrc_view_height">300dp</dimen>
+    <dimen name="mine_top_iv_height">150dp</dimen>
+    <dimen name="radio_more_text">18sp</dimen>
+    <dimen name="music_lib_vp_height">120dp</dimen>
+    <dimen name="music_lib_vp_margin">30dp</dimen>
+    <dimen name="music_lib_rv_height">300dp</dimen>
+    <dimen name="all_radio_item_height">90dp</dimen>
+    <dimen name="all_radio_item_width">80dp</dimen>
+    <dimen name="mv_item_cover_height">120dp</dimen>
+    <dimen name="rec_item_height_width">100dp</dimen>
+    <dimen name="songlist_item_height_wodth">180dp</dimen>
+    <dimen name="playing_list_lv_height">350dp</dimen>
 </resources>

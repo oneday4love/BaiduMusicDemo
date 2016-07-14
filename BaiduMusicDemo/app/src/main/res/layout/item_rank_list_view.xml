@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp"
+    android:padding="@dimen/common_padding"
     >
 
     <ImageView
@@ -10,15 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:src="@mipmap/default_playlist_list" />
+        android:layout_marginEnd="@dimen/common_margin"
+        android:src="@mipmap/default_song_cover" />
 
     <ImageView
         android:id="@+id/item_rank_list_view_play_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="@dimen/common_padding"
         android:layout_alignBottom="@id/item_rank_list_view_cover_iv"
-        android:layout_alignRight="@id/item_rank_list_view_cover_iv"
+        android:layout_alignEnd="@id/item_rank_list_view_cover_iv"
         android:src="@mipmap/ic_songlist_play" />
 
     <LinearLayout
@@ -32,7 +33,7 @@
             android:id="@+id/item_rank_list_view_song_list_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="歌单" />
+             />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -48,14 +49,16 @@
                 android:id="@+id/item_rank_list_view_first_song_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1." />
+                android:layout_gravity="center_vertical"
+                android:alpha="0.8"/>
 
             <TextView
                 android:id="@+id/item_rank_list_view_first_song_author"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="@dimen/common_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="歌手" />
+                android:layout_gravity="center_vertical"
+                android:alpha="0.8"/>
         </LinearLayout>
 
         <LinearLayout
@@ -72,13 +75,16 @@
                 android:id="@+id/item_rank_list_view_second_song_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2."/>
+                android:layout_gravity="center_vertical"
+                android:alpha="0.8"/>
 
             <TextView
                 android:id="@+id/item_rank_list_view_second_song_author"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="@dimen/common_margin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:alpha="0.8"/>
         </LinearLayout>
 
         <LinearLayout
@@ -95,13 +101,16 @@
                 android:id="@+id/item_rank_list_view_third_song_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3."/>
+                android:layout_gravity="center_vertical"
+                android:alpha="0.8"/>
 
             <TextView
                 android:id="@+id/item_rank_list_view_third_song_author"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="@dimen/common_margin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:alpha="0.8"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -110,7 +119,7 @@
         android:id="@+id/item_rank_list_view_detail_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:src="@mipmap/ic_songlist_detail_nor" />
 

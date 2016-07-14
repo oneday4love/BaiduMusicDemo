@@ -10,7 +10,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="@dimen/detail_appbar_height"
         android:fitsSystemWindows="true"
         >
 
@@ -32,7 +32,7 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/nested_rv_detail" />
+    <include layout="@layout/song_list_nested_rv_detail" />
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -13,14 +13,12 @@
 
         <ImageView
             android:id="@+id/item_img1"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/common_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/default_artist" />
         <TextView
             android:id="@+id/item_author1"
-            android:text="author"
-            android:textSize="12sp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -35,14 +33,12 @@
 
         <ImageView
             android:id="@+id/item_img2"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/common_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/default_artist" />
         <TextView
             android:id="@+id/item_author2"
-            android:text="author"
-            android:textSize="12sp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -57,14 +53,12 @@
 
         <ImageView
             android:id="@+id/item_img3"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/common_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/default_artist" />
         <TextView
             android:id="@+id/item_author3"
-            android:text="author"
-            android:textSize="12sp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

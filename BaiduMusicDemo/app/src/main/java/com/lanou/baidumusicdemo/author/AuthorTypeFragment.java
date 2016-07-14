@@ -1,6 +1,8 @@
 package com.lanou.baidumusicdemo.author;
 
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -9,6 +11,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.lanou.baidumusicdemo.R;
 import com.lanou.baidumusicdemo.base.BaseFragment;
+import com.lanou.baidumusicdemo.main.ClickToAuthorDetail;
+import com.lanou.baidumusicdemo.main.ClickToSongListDetail;
+import com.lanou.baidumusicdemo.main.MainActivity;
 import com.lanou.baidumusicdemo.volley.GsonRequest;
 import com.lanou.baidumusicdemo.volley.RequestQueueSingleton;
 
@@ -38,7 +43,7 @@ public class AuthorTypeFragment extends BaseFragment {
     @Override
     public void initData() {
         adapter = new AuthorTypeLvAdapter(context);
-
+        authorType.setText(getArguments().getString("type"));
         String typeUrl = getArguments().getString("typeUrl");
         GsonRequest<AuthorTypeBean> gsonRequest = new GsonRequest<AuthorTypeBean>(typeUrl, AuthorTypeBean.class, new Response.Listener<AuthorTypeBean>() {
             @Override
@@ -54,5 +59,23 @@ public class AuthorTypeFragment extends BaseFragment {
             }
         });
         RequestQueueSingleton.getInstance(context).getRequestQueue().add(gsonRequest);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                ((ClickToAuthorDetail)getActivity()).toAuthorDetail(bean.getArtist().get(position).getTing_uid(),
+                        bean.getArtist().get(position).getAvatar_big(), bean.getArtist().get(position).getName());
+            }
+        });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).returnToPrev();
+            }
+        });
+
     }
 }

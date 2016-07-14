@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="5dp"
+    android:padding="@dimen/common_padding"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/song_list_rv_item">
 
     <ImageView
         android:id="@+id/item_song_list_rv_cover_iv"
-        android:scaleType="fitXY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/songlist_item_height_wodth"
+        android:layout_height="@dimen/songlist_item_height_wodth"
         android:src="@mipmap/default_playlist_list"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="@dimen/common_padding"
         android:layout_alignBottom="@id/item_song_list_rv_cover_iv"
         android:orientation="horizontal">
 
@@ -28,16 +27,15 @@
             android:id="@+id/item_song_list_rv_listen_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:textColor="#ffffff"
-            android:text=" 人数" />
+            android:textColor="@color/colorTextWhite"
+             />
 
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="@dimen/common_padding"
         android:layout_alignBottom="@id/item_song_list_rv_cover_iv"
         android:layout_alignRight="@id/item_song_list_rv_cover_iv"
         android:src="@mipmap/ic_songlist_play" />
@@ -47,15 +45,14 @@
         android:id="@+id/item_song_list_rv_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
         android:layout_below="@id/item_song_list_rv_cover_iv"
-        android:text="11" />
+         />
 
     <TextView
         android:id="@+id/item_song_list_rv_tag_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
+        android:alpha="0.75"
         android:layout_below="@id/item_song_list_rv_title_tv"
         />
 

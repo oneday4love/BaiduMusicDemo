@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorBg">#3ea6e7</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorBgAlpha">#01000000</color>
+    <color name="colorBgWhite">#ffffff</color>
+    <color name="colorBgPlayPage">#53c2c2</color>
+    <color name="colarBgNotif">#000000</color>
+
 </resources>

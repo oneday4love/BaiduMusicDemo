@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
+    android:background="@color/colarBgNotif"
     >
 
     <ImageView
         android:id="@+id/notification_cover_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:src="@mipmap/minibar_default_img" />
 
     <TextView
         android:id="@+id/notification_song_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/notification_cover_iv"
-        android:text="歌曲名"
-        android:textSize="20sp" />
+        android:textColor="@color/colorTextWhite"
+        android:layout_marginStart="@dimen/common_margin"
+        android:textSize="@dimen/common_text_size" />
 
     <TextView
         android:id="@+id/notification_singer_tv"
@@ -24,8 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/notification_song_name_tv"
         android:layout_toRightOf="@id/notification_cover_iv"
-        android:text="歌手"
-        android:textSize="15sp" />
+        android:textColor="@color/colorTextWhite"
+        android:layout_marginStart="@dimen/common_margin"
+        android:alpha="0.7"
+         />
 
 
     <ImageView
@@ -43,8 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/notification_singer_tv"
         android:layout_toRightOf="@id/notification_prev_btn"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
         android:src="@drawable/notification_play_selector" />
 
     <ImageView
@@ -53,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/notification_singer_tv"
         android:layout_toRightOf="@id/notification_play_btn"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="@dimen/common_margin"
         android:src="@mipmap/bt_notificationbar_next" />
 
     <ImageView
@@ -61,6 +65,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:padding="5dp"
+        android:padding="@dimen/common_padding"
         android:src="@mipmap/bt_notificationbar_close" />
 </RelativeLayout>

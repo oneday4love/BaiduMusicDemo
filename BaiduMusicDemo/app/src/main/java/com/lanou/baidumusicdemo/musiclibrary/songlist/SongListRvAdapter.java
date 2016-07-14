@@ -11,7 +11,11 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.lanou.baidumusicdemo.R;
+import com.lanou.baidumusicdemo.musiclibrary.rank.rankdetail.RankDetailBean;
+import com.lanou.baidumusicdemo.service.SongPlayBean;
 import com.lanou.baidumusicdemo.volley.RequestQueueSingleton;
+
+import java.util.List;
 
 /**
  * Created by dllo on 16/6/20.
@@ -35,6 +39,10 @@ public class SongListRvAdapter extends RecyclerView.Adapter<SongListRvAdapter.My
         notifyDataSetChanged();
     }
 
+    public void addBean (SongListBean songListBean){
+        bean.getContent().addAll(songListBean.getContent());
+        notifyItemInserted(bean.getContent().size());
+    }
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_song_list_rv, parent, false);

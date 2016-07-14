@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="7dp">
+        android:orientation="horizontal"
+        android:padding="@dimen/common_padding">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -17,19 +19,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="全部歌单"/>
+            android:text="@string/list_all_list" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:src="@mipmap/more_bt"/>
+            android:layout_marginStart="@dimen/common_margin"
+            android:src="@mipmap/more_bt" />
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/song_list_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/song_list_swipe_refresh_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/song_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
 
 </LinearLayout>

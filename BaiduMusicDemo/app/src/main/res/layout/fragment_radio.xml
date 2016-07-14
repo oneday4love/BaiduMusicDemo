@@ -7,7 +7,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <ImageView
@@ -20,12 +20,12 @@
             android:id="@+id/radio_more_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/common_margin"
             android:background="@drawable/radio_more_bg"
             android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="更多电台分类"
-            android:textSize="18sp" />
+            android:padding="@dimen/common_padding"
+            android:text="@string/radio_more"
+            android:textSize="@dimen/radio_more_text" />
     </LinearLayout>
 
 </ScrollView>

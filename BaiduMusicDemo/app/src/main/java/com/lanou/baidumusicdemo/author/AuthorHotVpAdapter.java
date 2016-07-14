@@ -22,6 +22,11 @@ public class AuthorHotVpAdapter extends PagerAdapter {
 
     private Context context;
     private AuthorHotBean bean;
+    private OnImgClickListener onImgClickListener;
+
+    public void setOnImgClickListener(OnImgClickListener onImgClickListener) {
+        this.onImgClickListener = onImgClickListener;
+    }
 
     public AuthorHotVpAdapter(Context context) {
         this.context = context;
@@ -51,7 +56,7 @@ public class AuthorHotVpAdapter extends PagerAdapter {
         TextView author1 = (TextView) item.findViewById(R.id.item_author1);
         TextView author2 = (TextView) item.findViewById(R.id.item_author2);
         TextView author3 = (TextView) item.findViewById(R.id.item_author3);
-        int pos = position * 3;
+        final int pos = position * 3;
         author1.setText(bean.getArtist().get(pos).getName());
         author2.setText(bean.getArtist().get(pos + 1).getName());
         author3.setText(bean.getArtist().get(pos + 2).getName());
@@ -62,6 +67,25 @@ public class AuthorHotVpAdapter extends PagerAdapter {
         RequestQueueSingleton.getInstance(context).getImageLoader().get(bean.getArtist().get(pos + 2).getAvatar_big(),
                 ImageLoader.getImageListener(img3, R.mipmap.default_artist, R.mipmap.default_artist));
 
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImgClickListener.onImgClick(pos);
+            }
+        });
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImgClickListener.onImgClick(pos + 1);
+            }
+        });
+        img3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImgClickListener.onImgClick(pos + 2);
+            }
+        });
+
         container.addView(item);
         return item;
     }
@@ -69,5 +93,9 @@ public class AuthorHotVpAdapter extends PagerAdapter {
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
 
+    }
+
+    interface OnImgClickListener {
+        void onImgClick(int pos);
     }
 }

@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:background="#33c2ff"
+        android:background="@color/colorBg"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/author_type_back_btn"
             android:src="@mipmap/ic_back_normal"
@@ -14,8 +14,9 @@
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/author_type_tv"
-            android:text="歌手类型"
-            android:textSize="17sp"
+            android:text="@string/authorType"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/common_text_size"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -26,7 +27,7 @@
     </android.support.v7.widget.Toolbar>
 
     <TextView
-        android:text="热门"
+
         android:textSize="15sp"
         android:padding="15dp"
         android:layout_width="match_parent"

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="5dp"
+    android:padding="@dimen/common_padding"
     android:background="@drawable/item_rv_bg"
     android:id="@+id/item_song_list_detail">
 
@@ -10,22 +10,22 @@
         android:id="@+id/item_song_list_detail_rv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text="标题"/>
+        android:layout_marginLeft="@dimen/common_padding" />
 
     <TextView
         android:id="@+id/item_song_list_detail_rv_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="@dimen/common_margin"
+        android:alpha="0.7"
         android:layout_below="@id/item_song_list_detail_rv_title"
-        android:text="singer"/>
+        />
 
     <ImageView
-        android:id="@+id/item_song_list_detail_detail_iv"
+        android:id="@+id/item_song_list_detail_more_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:src="@mipmap/detail_song"/>
 

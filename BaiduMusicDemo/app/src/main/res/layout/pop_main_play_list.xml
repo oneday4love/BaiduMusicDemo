@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/pop_play_list_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:alpha="0.3"
+        android:background="@color/colarBgNotif" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5e5e5e"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_padding">
+
+        <ImageView
+            android:id="@+id/pop_play_pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bt_widget_mode_cycle_press" />
+
+        <TextView
+            android:id="@+id/pop_play_list_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/playing_list_txt"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/common_text_size" />
+
+        <TextView
+            android:id="@+id/pop_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/clear_all_txt"
+            android:textColor="@color/colorTextWhite"
+             />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pop_list_play_none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/common_padding"
+        android:text="@string/none_txt"
+        android:textSize="@dimen/common_text_size"
+        android:background="@color/colorTextWhite"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgWhite">
+        <ListView
+            android:id="@+id/pop_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/playing_list_lv_height" />
+    </LinearLayout>
+
+
+</LinearLayout>

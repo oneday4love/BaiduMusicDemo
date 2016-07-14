@@ -1,5 +1,7 @@
 package com.lanou.baidumusicdemo.service;
 
+import com.lanou.baidumusicdemo.db.PlayList;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -8,15 +10,15 @@ import java.util.HashMap;
  */
 public class PlayListManager {
 
-    private HashMap<String,SongPlayBean> playList;
+    private ArrayList<PlayList> playList;
     private static PlayListManager playListManager;
 
-    public HashMap<String, SongPlayBean> getPlayList() {
+    public ArrayList<PlayList> getPlayList() {
         return playList;
     }
 
     private PlayListManager() {
-        playList = new HashMap<>();
+        playList = new ArrayList<>();
     }
 
     public static PlayListManager getInstance(){
@@ -30,21 +32,7 @@ public class PlayListManager {
         return playListManager;
     }
 
-    // 添加一个
-    public void addSong(SongPlayBean songPlayBean){
-        String songId = songPlayBean.getSonginfo().getSong_id();
-        if (!playList.keySet().contains(songId)){
-            playList.put(songId, songPlayBean);
-        }
-    }
 
-    // 移除一个
-    public void removeSong(SongPlayBean songPlayBean){
-        playList.remove(songPlayBean.getSonginfo().getSong_id());
-    }
 
-    // 移除全部
-    public void removeAll(){
-        playList.clear();
-    }
+
 }

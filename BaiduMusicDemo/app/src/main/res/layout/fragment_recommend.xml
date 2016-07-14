@@ -18,9 +18,9 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/recommend_vp"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_height="@dimen/music_lib_vp_height"
+                android:layout_marginLeft="@dimen/music_lib_vp_margin"
+                android:layout_marginRight="@dimen/music_lib_vp_margin"
                 android:clipChildren="false"/>
 
             <LinearLayout
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/recommend_vp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/common_margin"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"/>
 
@@ -85,20 +85,20 @@
                         />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="@dimen/common_margin"
                         android:layout_gravity="center_vertical"
-                        android:text="歌单推荐" />
+                        android:text="@string/music_lib_rec_text" />
 
                     <TextView
                         android:id="@+id/rec_song_list_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="更多"
-                        android:textSize="12sp" />
+                        android:text="@string/music_lib_more"
+                        />
 
                     <ImageView
                         android:id="@+id/rec_song_list_more_iv"
@@ -110,7 +110,7 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rec_rv"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="@dimen/music_lib_rv_height"
                     android:background="@android:color/white">
 
                 </android.support.v7.widget.RecyclerView>

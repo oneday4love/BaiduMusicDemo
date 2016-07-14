@@ -5,12 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".main.MainActivity"
-    android:background="#ffffff">
+    android:background="@color/colorBgWhite"
+    android:id="@+id/main_layout">
 
     <FrameLayout
         android:id="@+id/replace_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"/>
 
     <include layout="@layout/minibar"/>

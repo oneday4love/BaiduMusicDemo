@@ -12,6 +12,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.lanou.baidumusicdemo.R;
 import com.lanou.baidumusicdemo.base.BaseFragment;
+import com.lanou.baidumusicdemo.base.UrlValues;
 import com.lanou.baidumusicdemo.main.ClickToRankDetail;
 import com.lanou.baidumusicdemo.main.MainActivity;
 import com.lanou.baidumusicdemo.musiclibrary.rank.rankdetail.RankDetailFragment;
@@ -27,7 +28,7 @@ public class RankFragment extends BaseFragment implements AdapterView.OnItemClic
     private RankListViewAdapter adapter;
     private RankBean rankBean;
 
-    private String url = "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.billboard.billCategory&format=json&from=ios&version=5.2.1&from=ios&channel=appstore";
+    private String url = UrlValues.RANK_URL;
 
     @Override
     public int setLayout() {

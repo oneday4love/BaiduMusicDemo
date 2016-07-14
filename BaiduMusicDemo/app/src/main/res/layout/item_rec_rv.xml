@@ -3,19 +3,20 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="5dp"
+    android:padding="@dimen/common_padding"
     android:id="@+id/item_rec_rv">
 
     <ImageView
         android:id="@+id/item_rec_rv_cover"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/rec_item_height_width"
+        android:layout_height="@dimen/rec_item_height_width"
         android:src="@mipmap/default_playlist_list"/>
     <ImageView
         android:id="@+id/item_rec_rv_lisn_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_lebo_listen"
+        android:layout_margin="@dimen/common_margin"
         android:layout_alignBottom="@id/item_rec_rv_cover"/>
 
     <TextView
@@ -24,13 +25,13 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/item_rec_rv_lisn_iv"
         android:layout_alignBottom="@id/item_rec_rv_lisn_iv"
-        android:textColor="#ffffff"
-        android:text="人数"/>
+        android:textColor="@color/colorTextWhite"
+        />
     <TextView
         android:id="@+id/item_rec_rv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/item_rec_rv_cover"
-        android:text="title"/>
+        />
 
 </RelativeLayout>

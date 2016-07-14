@@ -21,6 +21,11 @@ public class RankDetailRvAdapter extends RecyclerView.Adapter<RankDetailRvAdapte
     private RankDetailBean bean;
     private Context context;
     private OnRankDetailRvListener onRankDetailRvListener;
+    private OnGetMoreListener onGetMoreListener;
+
+    public void setOnGetMoreListener(OnGetMoreListener onGetMoreListener) {
+        this.onGetMoreListener = onGetMoreListener;
+    }
 
     public void setOnRankDetailRvListener(OnRankDetailRvListener onRankDetailRvListener) {
         this.onRankDetailRvListener = onRankDetailRvListener;
@@ -46,11 +51,17 @@ public class RankDetailRvAdapter extends RecyclerView.Adapter<RankDetailRvAdapte
         holder.title.setText(bean.getSong_list().get(position).getTitle());
         holder.author.setText(bean.getSong_list().get(position).getAuthor());
         RequestQueueSingleton.getInstance(context).getImageLoader().get(bean.getSong_list().get(position).getPic_big(),
-                ImageLoader.getImageListener(holder.coverIv ,R.mipmap.default_song_cover, R.mipmap.default_song_cover));
+                ImageLoader.getImageListener(holder.coverIv ,R.mipmap.minibar_default_img, R.mipmap.minibar_default_img));
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onRankDetailRvListener.onItemClick(position);
+            }
+        });
+        holder.moreIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onGetMoreListener.OnMoreClick(position);
             }
         });
     }
@@ -62,11 +73,12 @@ public class RankDetailRvAdapter extends RecyclerView.Adapter<RankDetailRvAdapte
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView coverIv;
+        ImageView coverIv, moreIv;
         TextView title, author;
         RelativeLayout item;
         public MyViewHolder(View itemView) {
             super(itemView);
+            moreIv = (ImageView) itemView.findViewById(R.id.item_rank_detail_rv_more_iv);
             coverIv = (ImageView) itemView.findViewById(R.id.item_rank_detail_rv_cover_iv);
             title = (TextView) itemView.findViewById(R.id.item_rank_detail_rv_title);
             author = (TextView) itemView.findViewById(R.id.item_rank_detail_rv_author);
@@ -76,5 +88,9 @@ public class RankDetailRvAdapter extends RecyclerView.Adapter<RankDetailRvAdapte
 
     interface OnRankDetailRvListener{
         void onItemClick(int position);
+    }
+
+    interface OnGetMoreListener{
+        void OnMoreClick(int position);
     }
 }

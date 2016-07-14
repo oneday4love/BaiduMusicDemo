@@ -5,30 +5,34 @@
     android:orientation="horizontal">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/minibar_layout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="bottom">
 
         <ImageView
             android:id="@+id/minibar_cover_iv"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@mipmap/minibar_default_img" />
 
         <TextView
             android:id="@+id/minibar_title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin"
             android:layout_toRightOf="@id/minibar_cover_iv"
-            android:text="百度音乐  听到极致" />
+            />
 
         <TextView
             android:id="@+id/minibar_author_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/minibar_title_tv"
+            android:alpha="0.7"
+            android:layout_marginLeft="@dimen/common_margin"
             android:layout_toRightOf="@id/minibar_cover_iv"
             android:text="" />
 
@@ -45,15 +49,15 @@
             android:id="@+id/minibar_show_playinglist_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="@dimen/common_margin"
             android:src="@mipmap/bt_minibar_playinglist_normal" />
 
         <ImageView
             android:id="@+id/minibar_play_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/minibar_play_selector" />
+            android:layout_marginRight="@dimen/common_margin"
+            android:src="@mipmap/bt_minibar_play_normal" />
 
         <ImageView
             android:id="@+id/minibar_next_btn"

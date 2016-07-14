@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3e96f7"
+    android:background="@color/colorBg"
+    android:clipChildren="false"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -14,7 +15,7 @@
             android:id="@+id/radio_play_pull_down_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="@dimen/common_padding"
             android:src="@mipmap/radio_play_pull_down" />
 
         <LinearLayout
@@ -29,9 +30,9 @@
                 android:id="@+id/radio_play_scene_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="scene"
                 android:layout_gravity="center_vertical"
-                android:textSize="20sp" />
+                android:textSize="@dimen/common_text_size"
+                android:textColor="@color/colorTextWhite"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -44,8 +45,7 @@
             android:id="@+id/radio_play_more_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:src="@mipmap/detail_song" />
     </RelativeLayout>
 
@@ -53,23 +53,24 @@
         android:id="@+id/radio_play_vp"
         android:layout_width="wrap_content"
         android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/play_page_vp_margin"
+        android:layout_marginRight="@dimen/play_page_vp_margin"
         android:clipChildren="false"
         android:layout_gravity="center_horizontal"/>
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/play_page_vp_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/radio_play_del_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:src="@mipmap/radio_play_remove_normal"/>
+            android:src="@mipmap/bt_playpage_button_trash_press"/>
 
         <ImageView
             android:id="@+id/radio_play_fav_btn"
@@ -77,7 +78,7 @@
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_fav_normal"/>
+            android:src="@mipmap/bt_sceneplay_collect_press"/>
 
         <ImageView
             android:id="@+id/radio_play_down_load_btn"
@@ -85,15 +86,15 @@
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_download_normal"/>
-        <TextView
+            android:src="@mipmap/bt_sceneplay_down_press"/>
+        <ImageView
             android:id="@+id/radio_play_lrc_img_btn"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="图"/>
+            android:src="@mipmap/bt_playpage_button_pic_press"
+            />
 
     </LinearLayout>
 

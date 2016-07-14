@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainVpAdapter extends FragmentPagerAdapter{
 
     private ArrayList<Fragment> fragments;
-    private String[] titles = {"我的", "乐库", "K歌", "直播"};
+    private String[] titles = {"我的", "乐库"};
 
     public void setFragments(ArrayList<Fragment> fragments) {
         this.fragments = fragments;
